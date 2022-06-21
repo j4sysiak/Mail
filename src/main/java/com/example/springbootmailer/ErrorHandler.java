@@ -13,7 +13,7 @@ public class ErrorHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Object> get(RuntimeException e, WebRequest webRequest) {
-        String response = "Twoje imie jest za krotkie";
+        String response = "Twoje imie jest za krotkie ";
         System.out.println(e.getStackTrace());
         return handleExceptionInternal(e, response, HttpHeaders.EMPTY, HttpStatus.CONFLICT, webRequest);
     }
